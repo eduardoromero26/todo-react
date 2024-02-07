@@ -1,14 +1,26 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import { TodoList } from './components/TodoList'
+import { TodoAdd } from './components/TodoAdd'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-      <h1>Hello, welcome to your new </h1>
+      <div className='cardToDo'>
+        <h1>Lista de Tareas</h1>
+        <div className='counterTodos'>
+          <h3>N° Tareas: 4</h3>
+          <h3>Pendientes: 3</h3>
+        </div>
+        <div className="addTodo">
+          <h3>Agregar Tarea</h3>
+          <TodoAdd />
+        </div>
+        < TodoList />
+      </div>
+
     </>
   )
 }
